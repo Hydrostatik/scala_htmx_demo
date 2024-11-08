@@ -13,10 +13,8 @@ DB_NAME="${POSTGRES_DB:=fruitlabs}"
 # Stop and remove any existing Docker container
 CONTAINER_ID=$(docker ps -q --filter "ancestor=postgres" --filter "name=${DB_NAME}")
 if [ -n "$CONTAINER_ID" ]; then
-  # docker stop "${CONTAINER_ID}"
-  # docker rm "${CONTAINER_ID}"
-  echo "DB already exists, no need to run this script"
-  exit 0
+  docker stop "${CONTAINER_ID}"
+  docker rm "${CONTAINER_ID}"
 fi
 
 docker run \
