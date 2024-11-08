@@ -3,6 +3,8 @@
 .metals/*
 .bloop/*
 **/.bloop/*
+**/.scala-build/*
+**/.bsp/*
 
 ### macOS ###
 # General

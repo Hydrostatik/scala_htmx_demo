@@ -1,0 +1,7 @@
+version: '3'
+
+tasks:
+  desc: "Start the database"
+  init-db:
+    cmds:
+      - ./scripts/init_db.sh
