@@ -9,6 +9,7 @@ set -eo pipefail
 DB_USER=${POSTGRES_USER:=postgres}
 DB_PASSWORD="${POSTGRES_PASSWORD:=password}"
 DB_NAME="${POSTGRES_DB:=fruitlabs}"
+DB_PORT="${POSTGRES_PORT:=5432}"
 
 # Stop and remove any existing Docker container
 CONTAINER_ID=$(docker ps -q --filter "ancestor=postgres" --filter "name=${DB_NAME}")

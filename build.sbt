@@ -18,6 +18,11 @@ lazy val root = (project in file(".")).settings(
     "org.typelevel" %% "cats-effect-kernel" % "3.5.3",
     // standard "effect" library (Queues, Console, Random etc.)
     "org.typelevel" %% "cats-effect-std" % "3.5.3",
-    "org.typelevel" %% "munit-cats-effect" % "2.0.0" % Test
+    "org.typelevel" %% "munit-cats-effect" % "2.0.0" % Test,
+    // Functional JDBC library for Scala
+    "org.tpolecat" %% "doobie-core" % "1.0.0-RC5",
+    "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC5",
+    "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC5",
+    "org.postgresql" % "postgresql" % "42.5.3"
   )
 )
